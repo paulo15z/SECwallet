@@ -7,8 +7,8 @@ def main():
     setup_database()
 
     print("Bem vindo à SECwallet!")
-    master_password = getpass("Digite sua senha mestra: ")
-    fernet = get_or_create_key(master_password)
+    key_pass = getpass("Digite sua senha mestra: ")
+    fernet = get_or_create_key(key_pass)
 
     while True:
         print("\OPÇÕES:")

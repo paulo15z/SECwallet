@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 
 #GET OU CREATE CHAVE MESTRE
 def get_or_create_key(key_pass):
-    key = base64.urlsafe_b64decode(key_pass.encode()[:32].ljust(32)[:32])
+    key = base64.urlsafe_b64encode(key_pass.encode()[:32].ljust(32)[:32])
     return Fernet(key)
 
 def add_password(service, password, fernet, conn):
